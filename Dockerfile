@@ -27,4 +27,4 @@ COPY --from=builder /app/dht-indexer-rust.so /app/dht-indexer-rust.so
 COPY --from=builder /app/ffmpeg/ffprobe /bin/ffprobe
 COPY --from=builder /app/ffmpeg/ffmpeg /bin/ffmpeg
 
-CMD ["/app/cove"]
+CMD ["/app/cove", "-ipv6", "-headless"]
